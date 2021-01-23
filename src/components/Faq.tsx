@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { convertToHtml, getStructuredDataString } from '../utils';
 import * as Styles from './Faq.styles';
 import { FaqContext } from '../utils/contexts';
-import { Image, Slider } from '.';
 
 type PropsType = {};
 const Faq = ({}: PropsType) => {
