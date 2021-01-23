@@ -1,6 +1,6 @@
 {
-  "name": "next_template",
-  "short_name": "next_template",
+  "name": "hatajo",
+  "short_name": "hatajo",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
