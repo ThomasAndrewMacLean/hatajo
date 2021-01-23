@@ -9,6 +9,11 @@ const Hero = ({}: PropsType) => {
         <div className="content">
           <h1>Hero</h1>
           <button className="btn">button</button>
+
+          <div className="wrap">
+            <div className="two"></div>
+            <div className="one"></div>
+          </div>
         </div>
       </BackgroundImage>
     </Styles.HeroWrapper>

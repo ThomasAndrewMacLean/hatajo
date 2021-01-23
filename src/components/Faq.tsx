@@ -31,48 +31,6 @@ const Faq = ({}: PropsType) => {
             </details>
           );
         })}
-
-        <Image style={{ width: '450px' }} imageKey="demo-image"></Image>
-        <Slider
-          className="fullwidth"
-          sliderItems={[
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-            {
-              title: 'test',
-              text: 'hellooo',
-              image: 'demo-image',
-            },
-          ]}
-        />
       </div>
     </Styles.FaqWrapper>
   );
