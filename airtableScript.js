@@ -2,7 +2,7 @@ output.markdown('# Hello');
 
 const token = XXXXXXXX;
 const x = await fetch(
-  'https://api.github.com/repos/ThomasAndrewMacLean/hatajo/dispatches',
+  'https://api.github.com/repos/ThomasAndrewMacLean/hantayo/dispatches',
   {
     method: 'POST',
     headers: {
