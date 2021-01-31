@@ -27,9 +27,9 @@ const HomePage = ({}: PropsType) => {
       <BackgroundImage imageKey="image-2" fixed={true}>
         <div className="wrap" id="about">
           <FadeIn
-            waitTime={750}
-            animationDuration={700}
-            beginStyle={{ opacity: 0, transform: 'translateX(-100%)' }}
+            waitTime={350}
+            animationDuration={500}
+            beginStyle={{ opacity: 0 }}
           >
             <div className="content">
               <h2>

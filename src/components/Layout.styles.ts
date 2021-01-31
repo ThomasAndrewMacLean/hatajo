@@ -6,6 +6,7 @@ export const Wrap = styled.div`
   /* width: 90%;
   max-width: 900px; */
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   display: flex;
   flex-direction: column;
