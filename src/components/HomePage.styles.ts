@@ -5,7 +5,7 @@ export const HomePageWrapper = styled.div`
   display: flex;
   overflow: scroll;
   scroll-snap-type: x mandatory;
- 
+
   &::-webkit-scrollbar {
     display: none; /* Chrome */
   }
@@ -39,5 +39,26 @@ export const HomePageWrapper = styled.div`
         transform: translateX(-50%);
       }
     }
+  }
+  position: relative;
+
+  .right,
+  .left {
+    position: fixed;
+    top: 50%;
+    filter: invert(1);
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .left {
+    left: 40px;
+  }
+  .right {
+    right: 40px;
   }
 `;
