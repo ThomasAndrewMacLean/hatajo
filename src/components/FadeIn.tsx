@@ -31,16 +31,6 @@ const FadeIn = ({
   const [dynamicClass, setDynamicClass] = useState(className);
   const target = useRef(null);
 
-  if (
-    //@ts-ignore
-    !'IntersectionObserver' in window &&
-    //@ts-ignore
-    !'IntersectionObserverEntry' in window &&
-    //@ts-ignore
-    !'intersectionRatio' in window.IntersectionObserverEntry.prototype
-  ) {
-    return { children };
-  }
   const intersecting = useIntersection(target, { rootMargin, threshold: 0.5 });
 
   useEffect(() => {
