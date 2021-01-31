@@ -8,6 +8,8 @@ export const FooterWrapper = styled.footer`
   .social-link {
     img {
       height: 25px !important;
+      width: auto;
+      margin-right: 1rem;
       opacity: 0.7;
       transition: all 300ms ease;
       &:hover {

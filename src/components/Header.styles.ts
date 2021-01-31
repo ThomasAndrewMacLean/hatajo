@@ -9,8 +9,19 @@ export const HeaderWrapper = styled.header<{ stickyHeader: boolean }>`
   position: ${(props) => props.stickyHeader && 'fixed'};
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+  nav a {
+    margin-left: 1rem;
+  }
   h1 {
     font-weight: 100;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
+
+    @media only screen and (max-width: 600px) {
+      /* margin-left: auto; */
+    }
   }
 `;

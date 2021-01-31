@@ -5,6 +5,7 @@ export const HomePageWrapper = styled.div`
   display: flex;
   overflow: scroll;
   scroll-snap-type: x mandatory;
+ 
   &::-webkit-scrollbar {
     display: none; /* Chrome */
   }
@@ -26,6 +27,17 @@ export const HomePageWrapper = styled.div`
     text-align: center;
     font-weight: 200;
     h2 {
+      position: relative;
+      &::after {
+        content: '';
+        width: 50px;
+        height: 2px;
+        background: white;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 `;

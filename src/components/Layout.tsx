@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import * as Styled from './Layout.styles';
 import { Header, Footer, SEO } from '.';
-import { PageNameType, SEOType } from '../types';
+import { SEOType } from '../types';
 import { hasHeader, hasFooter, stickyHeader } from '../constants/settings';
 
 type LayoutProps = {

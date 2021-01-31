@@ -28,6 +28,8 @@ export default class MyDocument extends Document {
           <link rel="manifest" href={`${prefix}/manifest.json`} />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
+          <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+          <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
         </Head>
         <body>
           <Main />
