@@ -4,7 +4,7 @@ import { useIntersection } from 'use-intersection';
 
 type PropsType = {
   children: any;
-  beginStyle: any;
+  beginStyle?: any;
   className?: any;
   runFunction?: any;
   addClassToElement?: any;

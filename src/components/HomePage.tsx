@@ -5,7 +5,8 @@ import * as Styles from './HomePage.styles';
 type PropsType = {};
 const HomePage = ({}: PropsType) => {
   const ref = useRef(null);
-  const [hasClicked, setHasClicked] = useState(false);
+  const [hasLeft, setHasLeft] = useState(false);
+  const [hasRight, setHasRight] = useState(true);
 
   const goLeft = () => {
     //@ts-ignore
@@ -13,37 +14,40 @@ const HomePage = ({}: PropsType) => {
       top: 0,
       left:
         //@ts-ignore
-        -ref.current.scrollWidth /
-        //@ts-ignore
-        ref.current.childElementCount,
+        -ref.current.scrollWidth / 3,
       behavior: 'smooth',
     });
   };
 
   const goRight = () => {
-    setHasClicked(true);
     //@ts-ignore
     ref.current.scrollBy({
       top: 0,
       left:
         //@ts-ignore
-        ref.current.scrollWidth /
-        //@ts-ignore
-        ref.current.childElementCount,
+        ref.current.scrollWidth / 3,
       behavior: 'smooth',
     });
   };
 
   return (
     <Styles.HomePageWrapper ref={ref}>
-      {hasClicked && (
+      {hasLeft && (
         <div className="left" onClick={goLeft}>
           <Image imageKey="left"></Image>
         </div>
       )}
-      <div className="right" onClick={goRight}>
-        <Image imageKey="right"></Image>
-      </div>
+      {hasRight && (
+        <div className="right" onClick={goRight}>
+          <Image imageKey="right"></Image>
+        </div>
+      )}
+      <FadeIn
+        runFunction={() => setHasLeft(false)}
+        runFunctionWhenOutOfScreen={() => setHasLeft(true)}
+      >
+        <div></div>
+      </FadeIn>
       <BackgroundImage imageKey="image-1" fixed={true}>
         <div className="wrap" id="home">
           <FadeIn
@@ -97,6 +101,13 @@ const HomePage = ({}: PropsType) => {
           </FadeIn>
         </div>
       </BackgroundImage>
+
+      <FadeIn
+        runFunction={() => setHasRight(false)}
+        runFunctionWhenOutOfScreen={() => setHasRight(true)}
+      >
+        <div></div>
+      </FadeIn>
     </Styles.HomePageWrapper>
   );
 };

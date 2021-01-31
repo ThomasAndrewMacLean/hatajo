@@ -5,11 +5,12 @@ export const FooterWrapper = styled.footer`
   height: 50px;
   display: flex;
   align-items: center;
+  margin-left: auto;
   .social-link {
     img {
       height: 25px !important;
       width: auto;
-      margin-right: 1rem;
+      margin-left: 1rem;
       opacity: 0.7;
       transition: all 300ms ease;
       &:hover {

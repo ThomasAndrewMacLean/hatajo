@@ -14,8 +14,14 @@ export const HeaderWrapper = styled.header<{ stickyHeader: boolean }>`
     text-decoration: none;
     font-weight: 100;
     //transition: all 300ms ease;
-    &:hover {
-      font-weight: 400;
+    @media (hover: hover) {
+      &:hover {
+        /* font-weight: 400; */
+        text-decoration: underline;
+      }
+    }
+    &:active {
+      text-decoration: underline;
     }
   }
   nav a {
@@ -23,13 +29,5 @@ export const HeaderWrapper = styled.header<{ stickyHeader: boolean }>`
   }
   h1 {
     font-weight: 100;
-    &:hover {
-      font-weight: 400;
-    }
-    /* margin-left: 3rem; */
-
-    @media only screen and (max-width: 600px) {
-      /* margin-left: auto; */
-    }
   }
 `;

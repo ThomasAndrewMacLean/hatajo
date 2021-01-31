@@ -26,6 +26,8 @@ export const HomePageWrapper = styled.div`
     max-width: 400px;
     text-align: center;
     font-weight: 200;
+    text-shadow: 0 0 9px black;
+
     h2 {
       position: relative;
       &::after {
@@ -49,8 +51,23 @@ export const HomePageWrapper = styled.div`
     filter: invert(1);
     cursor: pointer;
     transition: all 300ms ease;
-
-    &:hover {
+    opacity: 0.7;
+    img {
+      filter: drop-shadow(0px 0px 4px white);
+    }
+    @media only screen and (max-width: 600px) {
+      top: 80%;
+      img {
+        height: 30px !important;
+        width: auto;
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &:active {
       transform: scale(1.2);
     }
   }
