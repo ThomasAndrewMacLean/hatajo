@@ -13,15 +13,30 @@ export const HeaderWrapper = styled.header<{ stickyHeader: boolean }>`
   a {
     text-decoration: none;
     font-weight: 100;
-    //transition: all 300ms ease;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      height: 1px;
+      background: #333;
+      transition: all 300ms ease;
+    }
     @media (hover: hover) {
       &:hover {
-        /* font-weight: 400; */
-        text-decoration: underline;
+        &::after {
+          left: 0%;
+          width: 100%;
+        }
       }
     }
     &:active {
-      text-decoration: underline;
+      &::after {
+        left: 0%;
+        width: 100%;
+      }
     }
   }
   nav a {
