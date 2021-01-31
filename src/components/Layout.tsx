@@ -1,21 +1,22 @@
 import React, { ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import * as Styled from './Layout.styles';
-import { Header, Footer } from '.';
-import { PageNameType } from '../types';
-import { stickyHeader } from '../constants/settings';
+import { Header, Footer, SEO } from '.';
+import { PageNameType, SEOType } from '../types';
+import { hasHeader, hasFooter, stickyHeader } from '../constants/settings';
 
 type LayoutProps = {
   children: ReactNode;
-  page: PageNameType;
+  seo: SEOType[];
 };
-const Layout = ({ children, page }: LayoutProps) => {
+const Layout = ({ children, seo }: LayoutProps) => {
   return (
     <Styled.Wrap>
-      <Header page={page}></Header>
-      {stickyHeader && <Styled.Pusher />}
+      <SEO seo={seo}></SEO>
+      {hasHeader && <Header></Header>}
+      {hasHeader && stickyHeader && <Styled.Pusher />}
       {children}
-      <Footer />
+      {hasFooter && <Footer seo={seo} />}
     </Styled.Wrap>
   );
 };

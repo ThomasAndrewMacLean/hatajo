@@ -12,4 +12,6 @@ export const BackgroundImageWrapper = styled.div<{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  min-width: 100%;
 `;

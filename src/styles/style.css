@@ -6,7 +6,7 @@
   --background-secondary-lighter: rgba(184, 255, 169, 0.591);
   --border: 3px solid black;
   --colour-black: #333;
-  --headerHeight: 150px;
+  --headerHeight: 95px;
   --shadow: 10px 10px 20px -5px #00000042;
   --gradient: linear-gradient(
     to right,
@@ -16,7 +16,7 @@
 }
 @media screen and (max-width: 750px) {
   :root {
-    --headerHeight: 100px;
+    --headerHeight: 95px;
   }
 }
 * {
@@ -74,49 +74,13 @@ li {
 .btn:hover {
   transform: scale(1.1);
 }
-
-/* em {
-  font-family: 'La Belle Aurore', cursive;
-} */
-
+p + p {
+  margin-top: 1rem;
+}
+a {
+  color: inherit;
+}
 h2 {
   margin-bottom: 2rem;
   font-weight: 200;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0 !important;
-}
-section {
-  margin-bottom: 7rem;
-}
-
-.content {
-  padding: 4rem 0;
-}
-.fullwidth {
-  width: 100vw;
-  left: 0;
-  margin-left: calc(450px - 50vw);
-}
-
-.fullwidth .content {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-}
-@media only screen and (max-width: 1000px) {
-  .fullwidth {
-    margin-left: -5vw;
-  }
-}
-
-.text-gradient h1 {
-  font-size: 4em;
-  font-weight: bold;
-  background: var(--gradient);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }

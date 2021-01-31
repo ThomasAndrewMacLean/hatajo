@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SEO } from '../components';
+import { Layout, HomePage } from '../components';
 import {
   TranslationContext,
   PictureContext,
@@ -14,8 +14,7 @@ import {
   FaqsType,
   DataAirtablePromiseType,
 } from '../types';
-import { homePageSections, pageNames } from '../constants';
-import { componentMap } from '../constants/components';
+import { pageNames } from '../constants';
 
 const IndexPage = ({ translations, pics, seo, faqs }: IndexPageProps) => {
   const page = pageNames.home;
@@ -24,18 +23,8 @@ const IndexPage = ({ translations, pics, seo, faqs }: IndexPageProps) => {
       <SEOContext.Provider value={seo}>
         <FaqContext.Provider value={faqs}>
           <TranslationContext.Provider value={translations}>
-            <Layout page={page}>
-              <main>
-                <SEO seo={seo}></SEO>
-                {homePageSections.map((comp, index) => {
-                  const component = componentMap[comp];
-                  if (component) {
-                    return (
-                      <component.type page={page} key={index}></component.type>
-                    );
-                  }
-                })}
-              </main>
+            <Layout seo={seo} page={page}>
+              <HomePage></HomePage>
             </Layout>
           </TranslationContext.Provider>
         </FaqContext.Provider>
