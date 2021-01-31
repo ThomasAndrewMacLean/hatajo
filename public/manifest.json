@@ -1,6 +1,6 @@
 {
-  "name": "hantayo",
-  "short_name": "hantayo",
+  "name": "onepager-demo",
+  "short_name": "onepager-demo",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
